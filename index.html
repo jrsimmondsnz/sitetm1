@@ -11,6 +11,10 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/HtmlTest.json", {onProgress: UnityProgress});
     </script>
+    	<script>
+		var userEmail = 'joe@fourfoxcreative.com';
+		unityInstance.SendMessage("JsBridge", "SetUserEmail", userEmail);
+	</script>
   </head>
   <body>
     <div class="webgl-content">
