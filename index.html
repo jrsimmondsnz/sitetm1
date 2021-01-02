@@ -12,8 +12,11 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/HtmlTest.json", {onProgress: UnityProgress});
     </script>
     	<script>
-		var userEmail = 'joe@fourfoxcreative.com';
+	var userEmail = 'joe@fourfoxcreative.com';
+	function sendBackMessage(){
 		unityInstance.SendMessage("JsBridge", "SetUserEmail", userEmail);
+		  //console.log("Sending message to Unity " + userEmail);
+	  }
 	</script>
   </head>
   <body>
